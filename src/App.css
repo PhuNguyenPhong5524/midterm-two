@@ -1,0 +1,8 @@
+body{
+    background-color: #192026;
+    color: #ffffff;
+}
+
+.bg-movie{
+    background: linear-gradient(to bottom,#1D1D1D00,#0F1E29);
+}
