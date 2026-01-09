@@ -68,7 +68,7 @@ const Header = () => {
                         type="text" 
                         placeholder="Search anime or movie..."
                         className="
-                            w-[300px] h-[48px] rounded-full px-[20px] py-[10px] bg-[#374151] outline-none
+                            w-[300px] h-[48px] rounded-full px-[20px] py-[10px] bg-[#013ab427] outline-none
                             placeholder:text-[#868686]
                         "
                     />

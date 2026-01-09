@@ -38,7 +38,7 @@ const BoxMovie = ({item, handleDetail}) => {
                     className="
                         absolute top-[95px] right-1/2 translate-x-1/2 w-[50px] h-[50px] bg-[#192026]/70 opacity-0 rounded-full flex 
                         justify-center items-center text-[#ffffff] transform transition-transform duration-300 ease-in-out 
-                        group-hover:opacity-100 scale-0 group-hover:scale-100 z-[30] cursor-pointer hover:scale-110 hover:bg-[#1e6cb1]
+                        group-hover:opacity-100 scale-0 group-hover:scale-100 z-[30] cursor-pointer hover:scale-110 hover:bg-[#0139B4]
                         
                     "
                 >
