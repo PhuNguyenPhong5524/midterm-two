@@ -1,13 +1,15 @@
 
 
 
-const Banner = ({movie, loading}) => {
+const Banner = ({movie, loading, loadingBanner}) => {
 
     return (
         <div className="relative overflow-hidden rounded-[12px]">
             {
-                loading ? (
-                    <div className="w-full h-[500px] bg-slate-800 animate-pulse"></div>
+                loading || loadingBanner ? (
+                    <div className="w-full h-[500px] bg-slate-800 animate-pulse flex justify-center items-center">
+                        <img src="/images/loading-img.png" alt="" className="w-[80px] h-[80px] object-cover rounded-[12px] animate-spin" />
+                    </div>
                 ) : (
                     movie && (
                         <a href="/" className="group">

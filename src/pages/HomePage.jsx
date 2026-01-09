@@ -10,6 +10,7 @@ const HomePage = () => {
     const {data: movies, loading} = useFetchData('movies');
     const [isMoviesId, setisMoviesId] = useState(null);
     const [scroll, setScroll] = useState(0);
+    const [loadingBanner, setLoadingBanner] = useState(false);
 
     useEffect(()=>{
         if(movies.length > 0 && !isMoviesId){
@@ -20,8 +21,13 @@ const HomePage = () => {
     const movie = movies.find((movie) => movie.id === isMoviesId);
 
     const handleDetail = (id) => {
+        setLoadingBanner(true);
         setisMoviesId(id);
         setScroll(prev => prev + 1);
+
+        setTimeout(() => {
+            setLoadingBanner(false);
+        }, 600);
     }
 
     useEffect(() => {
@@ -56,7 +62,7 @@ const HomePage = () => {
                         </p>
                     </div>
                 {/* Banner */}
-                    <Banner movie={movie} loading={loading}/>
+                    <Banner movie={movie} loading={loading} loadingBanner={loadingBanner} />
                 {/* Box section new release */}
                     <div>
                         {/* Title */}

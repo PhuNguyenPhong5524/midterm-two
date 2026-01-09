@@ -10,16 +10,22 @@ const useFetchData = (nameSource) => {
     const [error, setError] = useState(null);
 
     useEffect(()=>{
+        let time;
         const fetchAPI = async () => {
             try {
+                setLoading(true);
                 const res = await axios.get(`https://mindx-mockup-server.vercel.app/api/resources/${nameSource}?apiKey=695138d7fdb0c381f6e2b98e`);
                 setData(res?.data.data.data);
-                setLoading(false);
+                time = setTimeout(() => {
+                    setLoading(false);
+                }, 600);
             } catch (error) {
                 setError(error);
             }
         }
         fetchAPI();
+
+        return () => clearTimeout(time);
     },[nameSource]);
     return { data, loading, error }   
 }
