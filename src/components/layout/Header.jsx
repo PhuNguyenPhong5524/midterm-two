@@ -4,7 +4,7 @@ const Header = () => {
     return (
         <header
             className="
-                max-w-[1180px] mx-auto py-[10px] flex justify-between items-center 
+                max-w-[1180px] mx-auto py-[20px] flex justify-between items-center 
             "    
         >
             {/* Logo */}
@@ -15,7 +15,10 @@ const Header = () => {
                             text-[40px] font-bold
                         "
                     >
-                        Anonime
+                        <div className="flex">
+                            <img src="/images/logo-midterm.png" className="w-[50px] h-[50px]" alt="" />
+                            <span className="text-[#868686]">nonime</span>
+                        </div>
                     </a>
                 </div>
             {/* Nav */}
